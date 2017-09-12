@@ -1,11 +1,11 @@
 class Api::DogsController < ApplicationController
     def index
-        @dogs = Dogs.all
+        @dogs = Dog.all
         render json: @dogs
       end
-end
 
-def create
+
+    def create
     @dog = Dog.create!(dog_params)
     redirect_to dog_path(@dog)
   end
