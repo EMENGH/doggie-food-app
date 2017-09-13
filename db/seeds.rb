@@ -12,9 +12,9 @@ Food.destroy_all
 Dog.destroy_all
 
 
-shihtzu = Dog.new(name: "Ozzie", breed: "Shih Tzu",size: "small", photo_url: "https://imgur.com/5dFPvBG")
-husky = Dog.new(name: "Koby", breed: "Husky", size: "big", photo_url: "https://imgur.com/rdxk3Y3")
-australian_shepherd = Dog.new(name: "Sky", breed: "Australian Shepherd mix", size: "medium", photo_url: "https://imgur.com/AX8zDyn")
+shihtzu = Dog.new(name: "Ozzie", breed: "Shih Tzu",size: "small", photo_url: "https://i.imgur.com/5dFPvBG.jpg")
+husky = Dog.new(name: "Koby", breed: "Husky", size: "big", photo_url: "https://i.imgur.com/rdxk3Y3.jpg")
+australian_shepherd = Dog.new(name: "Sky", breed: "Australian Shepherd mix", size: "medium", photo_url: "https://i.imgur.com/AX8zDyn.jpg")
 
 shihtzu.foods = [
     Food.new(brand: "Purina shih tzu", breed: "Shih tzu",size: "small", link_url: "https://www.purina.com/dogs/dog-breeds/shih-tzu"),

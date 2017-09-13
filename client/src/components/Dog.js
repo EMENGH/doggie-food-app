@@ -1,54 +1,58 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import styled from 'styled-components'
+    import React, { Component } from 'react';
+    import { Link } from 'react-router-dom';
+    import axios from 'axios';
+    import styled from 'styled-components'
 
-const DogStyles = styled.div`
-    img {
-        max-height: 400px;
-        width: 100%;
+    const DogStyles = styled.div`
+        img {
+            max-height: 450px;
+            width: 30%;
+            margin: 20px;
+        }
+    `;
+
+    class Dog extends Component {
+    constructor(){
+        super();
+        this.state = {
+        dog: {},
+        foods: []
+        }
     }
-`;
 
-class Dog extends Component {
-  constructor(){
-    super();
-    this.state = {
-      dog: {},
-      songs: []
+    componentWillMount(){
+        this._fetchDogAndFoods();
     }
-  }
 
-  componentWillMount(){
-    this._fetchDogAndFoods();
-  }
+    _fetchDogAndFoods = async () => {
+        const id = this.props.match.params.id;
+        const res = await axios.get(`/api/dogs/${id}`)
+        console.log(res.data)
+        this.setState({
+        dog: res.data
+        })
+        return res.data
+        
+    }
 
-  _fetchDogAndFoods = async () => {
-    const id = this.props.match.params.id;
-    const res = await axios.get(`/api/dogs/${id}`)
-    this.setState({
-      dog: res.data.dog,
-      foods: res.data.foods
-    })
-  }
-
-  render(){
-    return (
-      <DogStyles>
-        <img src={this.state.dog.photo_url} />
-        <h1>{this.state.dog.name}</h1>
-        <h4>breed: {this.state.dog.breed}</h4>
-        <h3>Foods</h3>
-        {this.state.foods.map(food => (
-          <div key={food.id}>
-            <p>Brand: {food.brand}</p>
-            <p>Breed: {food.breed}</p>
-            <p>Size: {food.size}</p>
-            <p>Link: {food.link_url}</p>
-          </div>
-        ))}
-      </DogStyles>
-    )
-  }
-}
-export default Dog;
+    render(){
+        console.log(this.state.dog)
+        return (
+        <DogStyles>
+            <img src={this.state.dog.photo_url} />
+            <h1>{this.state.dog.name}</h1>
+            <h4>breed: {this.state.dog.breed}</h4>
+            <h3>Foods</h3>
+            {this.state.foods.map(food => (
+            <div key={food.id}>
+                <p>Brand: {food.brand}</p>
+                <p>Breed: {food.breed}</p>
+                <p>Size: {food.size}</p>
+                <p>Link: {food.link_url}</p>
+            </div>
+            ))}
+        </DogStyles>
+        )
+    }
+    }
+    export default Dog;

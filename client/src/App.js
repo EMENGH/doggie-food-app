@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import DogList from "./components/DogList";
 import Dog from "./components/Dog";
+import NewDog from './components/NewDog'
+import GlobalNav from './components/GlobalNav.js';
 import "./App.css";
 
 class App extends Component {
@@ -10,14 +12,16 @@ class App extends Component {
       <Router>
         <div className="App">
           <div>
-            <h1>Doggie Food App</h1>
-            <div>
+            <GlobalNav />
+            {/* <div>
               <Link to="/">Dogs</Link>
               <Link to="/dog/1">Dog</Link>
-            </div>
+            </div> */}
           </div>
-          <Route exact path="/" component={DogList} />
-          <Route path="/dog/:id" component={Dog} />
+          {/* <Route exact path="/" component={Home} /> */}
+          <Route exact path="/dogs" component={DogList} />
+          <Route exact path="/dog/:id" component={Dog} />
+          <Route exact path="/dogs/new" component={NewDog}/>
         </div>
       </Router>
     );

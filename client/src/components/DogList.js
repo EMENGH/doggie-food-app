@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import styled from 'styled-components';
+
+const DogDiv = styled.div`
+    background-image: https://i.imgur.com/kSZEho3.jpg
+    img {
+    width: 200px;
+    height: 200px;
+    }
+`
 class DogList extends Component {
   constructor(){
     super();
@@ -35,11 +44,12 @@ class DogList extends Component {
     }
     return (
       <div>
-        <h1>All Dogs</h1>
+        <h1>Dog Collection</h1>
         {this.state.dogs.map(dog => (
-          <div>
+          <DogDiv>
+            <img src={dog.photo_url} alt="dog" />
             <Link to={`/dog/${dog.id}`} >{dog.name}</Link> 
-          </div>
+          </DogDiv>
         ))}
       </div>
     );
