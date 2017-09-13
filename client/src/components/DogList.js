@@ -5,10 +5,10 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const DogDiv = styled.div`
-    background-image: https://i.imgur.com/kSZEho3.jpg
     img {
     width: 200px;
     height: 200px;
+    display: inline-block;
     }
 `
 class DogList extends Component {
