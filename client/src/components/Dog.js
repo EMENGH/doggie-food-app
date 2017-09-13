@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import styled from 'styled-components'
+
+const DogStyles = styled.div`
+    img {
+        max-height: 400px;
+        width: 100%;
+    }
+`;
 
 class Dog extends Component {
   constructor(){
