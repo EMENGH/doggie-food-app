@@ -36,6 +36,7 @@
     }
 
     render(){
+        const id = this.props.match.params.id;
         console.log(this.state.dog)
         return (
         <DogStyles>
@@ -43,6 +44,7 @@
             <h1>{this.state.dog.name}</h1>
             <h4>breed: {this.state.dog.breed}</h4>
             <h3>Foods</h3>
+            <Link to={`/dogs/${id}/edit`}>Edit</Link>
             {this.state.foods.map(food => (
             <div key={food.id}>
                 <p>Brand: {food.brand}</p>

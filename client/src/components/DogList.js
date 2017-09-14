@@ -4,13 +4,22 @@ import axios from 'axios';
 
 import styled from 'styled-components';
 
-const DogDiv = styled.div`
+const IndividualDogDiv = styled.div`
     img {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
+    width: 300px;
+    height: 300px;  
+    display: block;  
     }
-`
+    a {
+    color: white;
+    text-decoration: none;
+    }
+   `;
+
+const DogDivContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    `;
 class DogList extends Component {
   constructor(){
     super();
@@ -43,15 +52,17 @@ class DogList extends Component {
       return <div>{this.state.error}</div>
     }
     return (
-      <div>
-        <h1>Dog Collection</h1>
+    <div>
+    <div><h1>Dog Collection</h1></div>
+      <DogDivContainer>
         {this.state.dogs.map(dog => (
-          <DogDiv>
+          <IndividualDogDiv>
             <img src={dog.photo_url} alt="dog" />
-            <Link to={`/dog/${dog.id}`} >{dog.name}</Link> 
-          </DogDiv>
+            <Link to={`/dogs/${dog.id}`} >{dog.name}</Link>
+          </IndividualDogDiv>
         ))}
-      </div>
+      </DogDivContainer>
+    </div>
     );
   }
 }

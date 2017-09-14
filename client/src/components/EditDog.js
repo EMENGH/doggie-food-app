@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const LabelStyles = styled.label`
+     form input {    
+text: red;
+    }
+    `;
+
+const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 210px;
+    margin: 0 auto;
+    button {
+        align-self: center;
+    }
+`
 
 class EditDog extends Component {
     constructor(props) {
@@ -47,8 +66,19 @@ class EditDog extends Component {
         try {
             const res = await axios.patch(`/api/dogs/${dogId}`, dog)
             this.setState({ redirect: true })
+            return res.data
         } 
         catch (err) {
+            console.log(err)
+        }
+    }
+
+    _deleteDog = async (e)=>{
+        const id = this .props.match.params.id;
+        try{
+            const res = await axios.delete(`/api/dogs/${id}`)
+            this.setState({redirect: true})
+        } catch(err){
             console.log(err)
         }
     }
@@ -62,10 +92,16 @@ class EditDog extends Component {
     }
 
     render() {
+        if (this.state.redirect) {
+            return (
+                <Redirect to={`/dogs`}/>
+            )
+                } else {
       return (
+        <LabelStyles>
             <div>
                 <h1>Edit Dog</h1>
-                <form onSubmit={this._editDog}>
+                <Form onSubmit={this._editDog}>
                     <div>
                         <label htmlFor="name">Name: </label>
                         <input onChange={this._handleChange} type="text" name="name" value={this.state.dog.name} />
@@ -82,12 +118,18 @@ class EditDog extends Component {
                         <label htmlFor="photo_url">photo_url: </label>
                         <input onChange={this._handleChange} type="text" name="photo_url" value={this.state.dog.photo_url} />
                     </div>
-                    <button>Submit</button>
-                </form>
-                {this.state.redirect && (<Redirect to={`/dogs/${this.props.match.params.id}`}/>)}
+                    <button>SUBMIT</button>
+                </Form>
+                {/* {this.state.redirect && (<Redirect to={`/dogs/`}/>
+                )} */}
+                <button onClick={this._deleteArtist}>DELETE</button>
+
             </div>
-        );
+            </LabelStyles>
+        )
     }
 }
+}
+
 
 export default EditDog;

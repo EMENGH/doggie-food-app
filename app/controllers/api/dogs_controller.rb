@@ -18,7 +18,7 @@ class Api::DogsController < ApplicationController
   def update
     @dog = Dog.find(params[:id])
     @dog.update!(dog_params)
-    redirect_to dog_path(@dog)
+    render json: @dog
   end
 
   def destroy
