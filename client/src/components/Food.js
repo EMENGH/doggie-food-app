@@ -5,12 +5,13 @@ import axios from 'axios';
 import styled from 'styled-components'
 
 const FoodStyles = styled.div`
-//     img {
-//         max-height: 450px;
-//         width: 30%;
-//         margin: 20px;
-//     }
-// `;
+    img {
+        max-height: 450px;
+        width: 30%;
+        margin: 20px;
+        font-size: 20px;
+     }
+ `;
 
 class Food extends Component {
        constructor(){
@@ -32,7 +33,6 @@ _fetchFoodAndDogs = async () => {
          food: res.data
          })
          return res.data
-        
     }
 
     render() {
@@ -44,7 +44,7 @@ _fetchFoodAndDogs = async () => {
                <h1>{this.state.dog.name}</h1>
                <Link to={`/dogs/${id}/edit`}>Edit</Link>
                <h4>breed: {this.state.dog.breed}</h4> */}
-                <h3>Foods</h3>
+                {/* <h3>Foods</h3> */}
                 {this.state.food.map(food => (
                 <div key={food.id}>
                 <p>Brand: {food.brand}</p>
