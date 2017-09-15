@@ -1,5 +1,6 @@
     import React, { Component } from 'react';
     import { Link } from 'react-router-dom';
+    import Food from './Food';
     import axios from 'axios';
     import styled from 'styled-components'
 
@@ -42,9 +43,9 @@
         <DogStyles>
             <img src={this.state.dog.photo_url} />
             <h1>{this.state.dog.name}</h1>
+            <Link to={`/dogs/${id}/edit`}>Edit</Link>
             <h4>breed: {this.state.dog.breed}</h4>
             <h3>Foods</h3>
-            <Link to={`/dogs/${id}/edit`}>Edit</Link>
             {this.state.foods.map(food => (
             <div key={food.id}>
                 <p>Brand: {food.brand}</p>
@@ -53,6 +54,7 @@
                 <p>Link: {food.link_url}</p>
             </div>
             ))}
+            <Food id={this.props.match.params.id}/>
         </DogStyles>
         )
     }

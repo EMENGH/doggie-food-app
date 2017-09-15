@@ -122,7 +122,7 @@ class EditDog extends Component {
                 </Form>
                 {/* {this.state.redirect && (<Redirect to={`/dogs/`}/>
                 )} */}
-                <button onClick={this._deleteArtist}>DELETE</button>
+                <button onClick={this._deleteDog}>DELETE</button>
 
             </div>
             </LabelStyles>

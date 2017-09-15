@@ -8,7 +8,7 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5%;
-  background-color: rgba(2,100, 208, 2);
+  background-color: rgba(2,100, 150, 2);
   box-shadow: 0px 1px 6px black;
   a{
     text-decoration: none;

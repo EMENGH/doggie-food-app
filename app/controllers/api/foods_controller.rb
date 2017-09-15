@@ -3,8 +3,7 @@ class Api::FoodsController < ApplicationController
         
     def index
         @dog = Dog.find(params[:dog_id])
-        @foods = @dog.foods.all
-      
+        @foods = @dog.foods
         render json: @foods
     end
       

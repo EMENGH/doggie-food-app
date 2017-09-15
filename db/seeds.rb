@@ -17,6 +17,7 @@ husky = Dog.new(name: "Koby", breed: "Husky", size: "big", photo_url: "https://i
 australian_shepherd = Dog.new(name: "Sky", breed: "Australian Shepherd mix", size: "medium", photo_url: "https://i.imgur.com/AX8zDyn.jpg")
 labrador = Dog.new(name: "trampas", breed: "labrador", size: "medium", photo_url: "https://i.imgur.com/aaFS4AK.jpg")
 dalmatian = Dog.new(name: "one-zero-one", breed: "dalmatian", size: "medium", photo_url: "https://i.imgur.com/kvOW10d.png")
+saintbernard = Dog.new(name: "bigjimmy", breed: "saint bernard", size: "big", photo_url: "https://imgur.com/EE6ZSB5.jpg")
 
 shihtzu.foods = [
     Food.new(brand: "Purina shih tzu", breed: "Shih tzu",size: "small", link_url: "https://www.purina.com/dogs/dog-breeds/shih-tzu"),
@@ -44,3 +45,4 @@ husky.save!
 australian_shepherd.save!
 labrador.save!
 dalmatian.save!
+saintbernard.save!

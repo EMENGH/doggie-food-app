@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 const IndividualDogDiv = styled.div`
     img {
-    width: 300px;
-    height: 300px;  
+    width: 340px;
+    height: 370px;  
     display: block;  
     }
     a {
@@ -15,7 +15,17 @@ const IndividualDogDiv = styled.div`
     text-decoration: none;
     }
    `;
-
+const ButtonContainer = styled.div`
+    display: flex; 
+    font-size: 20px;
+    align-self: flex    -end;
+    margin: 10px 0px;
+    padding: 10px;
+    button {
+        width: 100px;
+        height: 40px;
+    }
+`;
 const DogDivContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -43,8 +53,7 @@ class DogList extends Component {
       console.log(err)
       await this.setState({error: err.message})
       return err.message
-    }
-    
+    }  
   }
 
   render() {
@@ -53,15 +62,18 @@ class DogList extends Component {
     }
     return (
     <div>
-    <div><h1>Dog Collection</h1></div>
-      <DogDivContainer>
+      <div><h1>Dog Collection</h1></div>    
+    <ButtonContainer>
+      <Link to={'/dogs/new'}><button>Add Dog</button></Link>
+    </ButtonContainer>
+    <DogDivContainer>
         {this.state.dogs.map(dog => (
           <IndividualDogDiv>
             <img src={dog.photo_url} alt="dog" />
             <Link to={`/dogs/${dog.id}`} >{dog.name}</Link>
           </IndividualDogDiv>
         ))}
-      </DogDivContainer>
+    </DogDivContainer>
     </div>
     );
   }
