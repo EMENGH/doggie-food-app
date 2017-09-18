@@ -3,12 +3,6 @@ import { Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
 
-// const LabelStyles = styled.label`
-// form input {    
-// text: red;
-// }
-// `;
-
 const Form = styled.form`
 display: flex;
 flex-direction: column;

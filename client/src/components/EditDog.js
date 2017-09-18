@@ -4,10 +4,10 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const LabelStyles = styled.label`
-     form input {    
-text: red;
-    }
-    `;
+    form input {    
+    text: red;
+   }
+     `;
 
 const Form = styled.form`
     display: flex;
@@ -87,7 +87,7 @@ class EditDog extends Component {
         const newState = {...this.state.dog}
         newState[e.target.name] = e.target.value
         this.setState({
-            dog: newState
+        dog: newState
         })
     }
 

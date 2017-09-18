@@ -27,8 +27,7 @@ const GlobalNav = () => {
       </Link>
       <div>
         <Link to="/dogs">Dogs</Link>
-        <Link to="/signup">Sign Up!</Link>
-        
+        <Link to="/signup">Sign Up!</Link>       
       </div>
     </Nav>
   );

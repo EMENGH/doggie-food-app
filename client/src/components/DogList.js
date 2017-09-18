@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
 import styled from 'styled-components';
 
 const IndividualDogDiv = styled.div`
     img {
-    width: 340px;
-    height: 370px;  
-    display: block;  
+      width: 340px;
+      height: 370px;  
+      display: block;  
     }
     a {
-    color: black;
-    font-size: 22px;
-    text-decoration: none;
+      color: black;
+      font-size: 22px;
+      text-decoration: none;
     }
    `;
 const ButtonContainer = styled.div`
@@ -22,12 +21,12 @@ const ButtonContainer = styled.div`
     margin: 10px 0px;
     padding: 10px;
     button {
-        width: 100px;
-        height: 40px;
-        background-color: rgba(2,100, 150, 2);
-        color: white;
-        font-size: 16px;
-        border-radius: 8px;
+      width: 100px;
+      height: 40px;
+      background-color: rgba(2,100, 150, 2);
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
     }
 `;
 const DogDivContainer = styled.div`
