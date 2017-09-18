@@ -7,8 +7,8 @@
     const DogStyles = styled.div`
         img {
             max-height: 450px;
-            width: 30%;
-            margin: 20px;
+            width: 25%;
+            margin: 10px;
 
         }
     `;
