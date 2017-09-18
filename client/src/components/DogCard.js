@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const DogStyles = styled.div`
   width: 30%;
   margin: 20px 0; 
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 1px black;
   img {
     width: 100%;
     max-height: 200px;
