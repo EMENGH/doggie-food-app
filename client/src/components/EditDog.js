@@ -18,6 +18,7 @@ const Form = styled.form`
     margin: 0 auto;
     button {
         align-self: center;
+        box-shadow: 1px 1px 1px black;
     }
 `
 
