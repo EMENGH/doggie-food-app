@@ -70,7 +70,7 @@ bulldog.foods = [
     Food.new(brand: "Purina bulldog",breed: "bulldog",size: "medium", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817"),
     Food.new(brand: "orijen",breed: "bulldog",size: "medium", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817")
 ]
-puddle.foods = [
+poodle.foods = [
     Food.new(brand: "Purina poodle",breed: "poodle",size: "medium", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817"),
     Food.new(brand: "orijen",breed: "poodle",size: "medium", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817")
 ]

@@ -10,7 +10,7 @@ Project Documentation:
 
 github: https://github.com/EMENGH/doggie-food-app 
 Trello: https://trello.com/b/uDVlCN9F/wdi-project-5-doggie-app
-heroku:   
+heroku: https://git.heroku.com/doggie-food-app.git  
 
 
 Technologies Used
