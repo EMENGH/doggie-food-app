@@ -8,7 +8,7 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5%;
-  background-color: rgba(2,100, 150, 2);
+  background-color: rgba(2,100, 130, 2);
   box-shadow: 0px 1px 6px black;
   a{
     text-decoration: none;
@@ -28,9 +28,10 @@ const GlobalNav = () => {
       <div>
         <Link to="/dogs">Dogs</Link>
         <Link to="/signup">Sign Up!</Link>
+        
       </div>
     </Nav>
   );
-};
+};  
 
 export default GlobalNav;
