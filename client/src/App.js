@@ -15,10 +15,6 @@ class App extends Component {
         <div className="App">
           <div>
             <GlobalNav />
-            {/* <div>
-              <Link to="/">Dogs</Link>
-              <Link to="/dog/1">Dog</Link>
-            </div> */}
           </div>
           {/* <Route exact path="/" component={Home} /> */}
           <Route exact path="/dogs" component={DogList} />
