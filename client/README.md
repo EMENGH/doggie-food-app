@@ -11,13 +11,14 @@ Project Documentation:
 github: https://github.com/EMENGH/doggie-food-app 
 Trello: https://trello.com/b/uDVlCN9F/wdi-project-5-doggie-app
 heroku: https://git.heroku.com/doggie-food-app.git  
+        https://doggie-food-app.herokuapp.com/dogs
 
 
 Technologies Used
   - React on Rails
+  - HTML, CSS, deployed in Heroku.
 
 Future Development
 
 Users should be able to create their profiles and login and logout everytime they use the app
 Users shoud be able to see additional facts about each dog by the use of links or external APIs.
-Click on a pin on the homepage map and be redirected to the corresponding city page.
