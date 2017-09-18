@@ -11,19 +11,23 @@ const IndividualDogDiv = styled.div`
     display: block;  
     }
     a {
-    color: white;
+    color: black;
+    font-size: 22px;
     text-decoration: none;
     }
    `;
 const ButtonContainer = styled.div`
     display: flex; 
-    font-size: 20px;
     align-self: flex    -end;
     margin: 10px 0px;
     padding: 10px;
     button {
         width: 100px;
         height: 40px;
+        background-color: rgba(2,100, 150, 2);
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
     }
 `;
 const DogDivContainer = styled.div`
@@ -64,7 +68,7 @@ class DogList extends Component {
     <div>
       <div><h1>Dog Collection</h1></div>    
     <ButtonContainer>
-      <Link to={'/dogs/new'}><button>Add Dog</button></Link>
+      <Link to={'/new'}><button>Add Dog</button></Link>
     </ButtonContainer>
     <DogDivContainer>
         {this.state.dogs.map(dog => (

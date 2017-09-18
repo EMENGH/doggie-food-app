@@ -9,6 +9,7 @@
             max-height: 450px;
             width: 30%;
             margin: 20px;
+
         }
     `;
 
