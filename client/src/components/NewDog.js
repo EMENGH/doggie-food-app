@@ -21,9 +21,6 @@ button {
 }
 `
 
-
-
-
 class NewDog extends Component {
   constructor(props){
     super(props);
