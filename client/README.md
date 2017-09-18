@@ -8,13 +8,16 @@ When Users are using the ap, they can look at a selection of dogs and be able to
 
 Project Documentation:
 
-Trello: https://trello.com/b/EupfBG81/wdi-project-4-david-k-joey-edgar
-Technologies Used
+github: https://github.com/EMENGH/doggie-food-app 
+Trello: https://trello.com/b/uDVlCN9F/wdi-project-5-doggie-app
+heroku:   
 
-Ruby on Rails
-Bootstrap
+
+Technologies Used
+  - React on Rails
+
 Future Development
 
-See Users can see the list of the city pages they've contributed to, on their public profile
-Users can see the number of posts they've written for each city, next to the city's name in their profile.
+Users should be able to create their profiles and login and logout everytime they use the app
+Users shoud be able to see additional facts about each dog by the use of links or external APIs.
 Click on a pin on the homepage map and be redirected to the corresponding city page.
