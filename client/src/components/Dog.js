@@ -9,7 +9,7 @@
             max-height: 450px;
             width: 30%;
             margin: 20px;
-
+            
         }
     `;
 
@@ -49,7 +49,7 @@
             <h3>Foods</h3>
             {this.state.foods.map(food => (
             <div key={food.id}>
-                <p>Brand: {food.brand}</h3>
+                <p>Brand: {food.brand}</p>
                 <p>Breed: {food.breed}</p>
                 <p>Size: {food.size}</p>
                 <p>Link: {food.link_url}</p>
