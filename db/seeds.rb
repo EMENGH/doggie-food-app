@@ -24,6 +24,7 @@ collie = Dog.new(name: "lassie", breed: "collie", size: "big", photo_url: "https
 akita = Dog.new(name: "bigjoe", breed: "akita", size: "big", photo_url: "https://i.imgur.com/f9Ll0kx.jpg")
 bulldog = Dog.new(name: "joemama", breed: "bulldog", size: "medium", photo_url: "https://i.imgur.com/EA3Vf.jpg")
 poodle = Dog.new(name: "parkinson", breed: "poodle", size: "medium", photo_url: "https://i.imgur.com/3FX40AW.jpg")
+germanshepherd = Dog.new(name: "mate", breed: "german shepherd", size: "big", photo_url: "https://i.imgur.com/1yFdqpW.png")
 
 shihtzu.foods = [
     Food.new(brand: "Purina shih tzu", breed: "Shih tzu",size: "small", link_url: "https://www.purina.com/dogs/dog-breeds/shih-tzu"),
@@ -69,9 +70,13 @@ bulldog.foods = [
     Food.new(brand: "Purina bulldog",breed: "bulldog",size: "medium", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817"),
     Food.new(brand: "orijen",breed: "bulldog",size: "medium", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817")
 ]
-poodle.foods = [
+puddle.foods = [
     Food.new(brand: "Purina poodle",breed: "poodle",size: "medium", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817"),
     Food.new(brand: "orijen",breed: "poodle",size: "medium", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817")
+]
+germanshepherd.foods = [
+    Food.new(brand: "Purina german shepherd",breed: "german shepherd",size: "big", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817"),
+    Food.new(brand: "orijen",breed: "german shepher",size: "big", link_url: "https://www.chewy.com/orijen-original-grain-free-dry-dog/dp/128817")
 ]
 
 shihtzu.save!
@@ -86,4 +91,5 @@ collie.save!
 akita.save!
 bulldog.save!
 poodle.save!
+germanshepherd.save!
 
