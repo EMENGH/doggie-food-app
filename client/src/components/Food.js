@@ -7,8 +7,8 @@ import styled from 'styled-components'
 const FoodStyles = styled.div`
     img {
         max-height: 450px;
-        width: 30%;
-        margin: 20px;
+        width: 25%;
+        margin: 10px;
         font-size: 20px;
      }
  `;
