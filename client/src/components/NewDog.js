@@ -3,21 +3,21 @@ import { Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
 
-const LabelStyles = styled.label`
-form input {    
-text: red;
-}
-`;
+// const LabelStyles = styled.label`
+// form input {    
+// text: red;
+// }
+// `;
 
 const Form = styled.form`
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: flex-end;
-width: 120px;
+width: 210px;
 margin: 0 auto;
 button {
-   align-self: center;
+    align-self: center;
 }
 `
 
