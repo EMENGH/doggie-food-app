@@ -13,12 +13,15 @@ Trello: https://trello.com/b/uDVlCN9F/wdi-project-5-doggie-app
 heroku: https://git.heroku.com/doggie-food-app.git  
         https://doggie-food-app.herokuapp.com/dogs
 
+ERD: https://i.imgur.com/6zoJ1sU.jpg
+wireframes: https://i.imgur.com/6rRghaN.jpg        
+
 
 Technologies Used
   - React on Rails
   - HTML, CSS, deployed in Heroku.
 
-Future Development
+Future Development  
 
 Users should be able to create their profiles and login and logout everytime they use the app
 Users shoud be able to see additional facts about each dog by the use of links or external APIs.
